@@ -1,0 +1,24 @@
+//@import-only
+
+$modal()
+  position absolute
+  z-index 10
+  top 0
+  right 0
+  bottom 0
+  left 0
+  display: flex;
+  justify-content center
+  align-items center
+  overflow auto
+  overflow-scrolling touch
+  &:before
+    content ''
+    $mask()
+  >*
+    background white
+    position: relative;
+  if top in arguments
+    align-items flex-start
+  if bottom in arguments
+    align-items flex-end

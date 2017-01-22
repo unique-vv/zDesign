@@ -1,0 +1,97 @@
+//@import-only
+
+btnSize(fontSize, height, horizontalPadding=fontSize)
+  padding 0 horizontalPadding
+  height height
+  line-height height
+  font-size fontSize
+  border-radius (fontSize / 2)
+btnColor(fontColor, bgColor, borderColor=bgColor)
+  color fontColor
+  background-color bgColor
+  border solid 1px borderColor
+  &:not([disabled]):active
+    background-color darken(bgColor, 20%)
+    border-color darken(borderColor, 20%)
+$btn()
+  appearance none
+  box-sizing border-box
+  white-space nowrap
+  display inline-block
+  width 100%
+  text-align center
+  vertical-align middle
+  cursor pointer
+  margin 0
+  btnSize($font-md, $space-md)
+  btnColor(white, $primary)
+  &:disabled
+    btnColor(white, $gray-light)
+    cursor not-allowed
+  if pierced in arguments
+    btnColor($primary, rgba(0,0,0,0), $primary)
+  if round in arguments
+    border-radius ($space-md / 2)
+  if xxs in arguments
+    btnSize($font-xs, $space-xxs)
+    if round in arguments
+      border-radius ($space-xxs / 2)
+  if xs in arguments
+    btnSize($font-sm, $space-xs)
+    if round in arguments
+      border-radius ($space-xs / 2)
+  if sm in arguments
+    btnSize($font-md, $space-sm)
+    if round in arguments
+      border-radius ($space-sm / 2)
+  if lg in arguments
+    btnSize($font-lg, $space-lg)
+    if round in arguments
+      border-radius ($space-lg / 2)
+  if xl in arguments
+    btnSize($font-lg, $space-xl)
+    if round in arguments
+      border-radius ($space-xl / 2)
+  if xxl in arguments
+    btnSize($font-xl, $space-xxl)
+    if round in arguments
+      border-radius ($space-xxl / 2)
+  if auto in arguments
+    width auto
+  if info in arguments
+    btnColor(white, $info)
+    if pierced in arguments
+      btnColor($info, rgba(0,0,0,0), $info)
+  if note in arguments
+    btnColor(white, $note)
+    if pierced in arguments
+      btnColor($note, rgba(0,0,0,0), $note)
+  if warning in arguments
+    btnColor(white, $warning)
+    if pierced in arguments
+      btnColor($warning, rgba(0,0,0,0), $warning)
+  if danger in arguments
+    btnColor(white, $danger)
+    if pierced in arguments
+      btnColor($danger, rgba(0,0,0,0), $danger)
+  if success in arguments
+    btnColor(white, $success)
+    if pierced in arguments
+      btnColor($success, rgba(0,0,0,0), $success)
+  if fail in arguments
+    btnColor(white, $fail)
+    if pierced in arguments
+      btnColor($fail, rgba(0,0,0,0), $fail)
+  if white in arguments
+    btnColor($gray-dark, white)
+    if pierced in arguments
+      btnColor(white, rgba(0,0,0,0), white)
+  if gray in arguments
+    btnColor($gray, $gray)
+    if pierced in arguments
+      btnColor($gray, rgba(0,0,0,0), $gray)
+  if gray-dark in arguments
+    btnColor($gray-dark, $gray-dark)
+    if pierced in arguments
+      btnColor($gray-dark, rgba(0,0,0,0), $gray-dark)
+      

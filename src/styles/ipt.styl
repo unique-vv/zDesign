@@ -1,0 +1,69 @@
+//@import-only
+
+$ipt()
+  appearance none
+  -webkit-appearance none
+  display inline-block
+  box-sizing border-box
+  border solid 1px $gray-light
+  background-color white
+  text-align inherit
+  width 100%
+  padding-left $font-md
+  padding-right $font-md
+  height $space-md
+  font-size $font-md
+  border-radius $radius-md
+  vertical-align middle
+  &[type*='date']
+    height auto
+    line-height $space-md
+  &:not([disabled]):hover
+    box-shadow 0 0 3px $primary
+  &:disabled
+    cursor not-allowed
+    background $gray-light
+  if noEvent in arguments
+    pointer-events none
+  if transparent in arguments
+    border-color transparent
+    background transparent
+  if noPadding in arguments
+    padding-left 0
+    padding-right 0
+  if auto in arguments
+    width auto
+  if radio in arguments
+    border-radius 50%
+    padding 0
+    margin -1px $radius-sm 0
+    width ($font-md * $line-height)
+    height ($font-md * $line-height)
+    outline none
+    border solid 1px $gray-light
+    &:checked
+      background radial-gradient($primary 30%, transparent 36%, transparent 100%)
+      background-size 100% 100%
+  if checkbox in arguments
+    border-radius 4px
+    padding 0
+    width ($font-md * $line-height)
+    height ($font-md * $line-height)
+    outline none
+    &:checked
+      background-repeat no-repeat
+      background-image linear-gradient(55deg, transparent 30%, $primary 36%, $primary 64%, transparent 70%),
+                       linear-gradient(120deg, transparent 38%, $primary 43%, $primary 57%, transparent 62%)
+      background-size 35% 35%, 67% 67%
+      background-position 15% 80%, 88% 50%
+  if select in arguments
+    background-image linear-gradient(to bottom left, transparent 80%, $gray-light 80%, $gray-light 86%, transparent 86%),
+                     linear-gradient(to bottom right, transparent 19%, $gray-light 19%, $gray-light 29%, transparent 29%)
+    background-repeat no-repeat
+    background-size ($space-md * 3 / 5) ($space-md * 3 / 5), ($space-md * 2 / 5) ($space-md * 2 / 5)
+    background-position 100% 0%, 100% 70%
+    background-origin padding-box
+    padding-right ($font-md * 5 / 3)
+  if textarea in arguments
+    height auto
+    padding 8px 8px

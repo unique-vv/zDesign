@@ -1,0 +1,33 @@
+//@import-only
+@require './base'
+
+:root
+  font-family Helvetica,'Microsoft Yahei',Arial,sans-serif
+  font-size 62.5%
+  color $plain
+  line-height 1.4
+  margin auto
+  height 100%
+  position relative
+  -webkit-tap-highlight-color transparent
+body
+  margin 0
+  font-size $font-md
+//larger than iphone5s
+@media (max-width:320px)
+//iphone5s
+  :root
+    font-size 52%
+input
+button
+select
+textarea
+  font-size inherit
+  color inherit
+  margin: 0
+a
+  text-decoration none
+  color inherit
+  cursor pointer
+img
+  vertical-align middle

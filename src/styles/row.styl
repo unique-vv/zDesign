@@ -1,0 +1,19 @@
+//@import-only
+
+$row()
+  box-sizing border-box
+  display table
+  width 100%
+  >*
+    box-sizing border-box
+    display table-cell
+    vertical-align middle
+  if auto in arguments
+    width auto
+  if top in arguments
+    >*
+      vertical-align top
+  if bottom in arguments
+    >*
+      vertical-align bottom
+      
