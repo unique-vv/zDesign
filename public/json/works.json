@@ -50,51 +50,73 @@
   {
     "id": "pad01",
     "name": "Music Website",
-    "thumbnail": "/img/pad01.png"
+    "thumbnail": "/img/pad01.png",
+    "img1": "/img/padhead_01.png",
+    "img2": "/img/pad01a.png",
+    "img3": "/img/pad01_2.png"
   },
   {
     "id": "pad02",
     "name": "Music Website",
-    "thumbnail": "/img/pad02.png"
+    "thumbnail": "/img/pad02.png",
+    "img1": "/img/padhead_02.png",
+    "img2": "/img/pad02a.png",
+    "img3": "/img/pad02_2.png"
   },
   {
     "id": "phone01",
     "name": "Music Website",
-    "thumbnail": "/img/phone01.png"
+    "thumbnail": "/img/phone01.png",
+    "img1": "/img/phonehead_01.png",
+    "img2": "/img/phone01a.png",
+    "img3": "/img/phone01_2.png"
   },
   {
     "id": "phone02",
     "name": "Music Website",
-    "thumbnail": "/img/phone02.png"
+    "thumbnail": "/img/phone02.png",
+    "img1": "/img/phonehead_02.png",
+    "img2": "/img/phone02a.png",
+    "img3": "/img/phone02_2.png"
   },
   {
     "id": "phone03",
     "name": "Music Website",
-    "thumbnail": "/img/phone03.png"
+    "thumbnail": "/img/phone03.png",
+    "img1": "/img/phonehead_03.png",
+    "img2": "/img/phone03a.png",
+    "img3": "/img/phone03_2.png"
   },
   {
     "id": "phone04",
     "name": "Music Website",
-    "thumbnail": "/img/phone04.png"
+    "thumbnail": "/img/phone04.png",
+    "img1": "/img/phonehead_04.png",
+    "img2": "/img/phone04a.png",
+    "img3": "/img/phone04_2.png"
   },
   {
     "id": "web01",
     "name": "Music Website",
-    "thumbnail": "/img/web01.png"
+    "thumbnail": "/img/web01.png",
+    "img1": "/img/pchead_web01.png",
+    "img2": "/img/website01.png",
+    "img3": "/img/website01_2.png"
   },
   {
     "id": "web02",
     "name": "Music Website",
-    "thumbnail": "/img/web02.png"
+    "thumbnail": "/img/web02.png",
+    "img1": "/img/pchead_web02.png",
+    "img2": "/img/website02.png",
+    "img3": "/img/website02_2.png"
   },
   {
     "id": "web03",
     "name": "Music Website",
-    "thumbnail": "/img/web03.png"
-  },
-  {
-    "id": "web04",
-    "name": "Music Website",
-    "thumbnail": "/img/web04.png"
+    "thumbnail": "/img/web03.png",
+    "img1": "/img/pchead_web03.png",
+    "img2": "/img/website03.png",
+    "img3": "/img/website03_2.png"
   }
 ]
