@@ -49,7 +49,6 @@
   },
   {
     "id": "pad01",
-<<<<<<< HEAD
     "name": "Music Website",
     "thumbnail": "/img/pad01.png",
     "img1": "/img/padhead_01.png",
@@ -119,54 +118,5 @@
     "img1": "/img/pchead_web03.png",
     "img2": "/img/website03.png",
     "img3": "/img/website03_2.png"
-=======
-    "name": "Tablet Application",
-    "thumbnail": "/img/pad01.png"
-  },
-  {
-    "id": "pad02",
-    "name": "Tablet Application",
-    "thumbnail": "/img/pad02.png"
-  },
-  {
-    "id": "phone01",
-    "name": "Mobile Application",
-    "thumbnail": "/img/phone01.png"
-  },
-  {
-    "id": "phone02",
-    "name": "Mobile Application",
-    "thumbnail": "/img/phone02.png"
-  },
-  {
-    "id": "phone03",
-    "name": "Mobile Application",
-    "thumbnail": "/img/phone03.png"
-  },
-  {
-    "id": "phone04",
-    "name": "Mobile Application",
-    "thumbnail": "/img/phone04.png"
-  },
-  {
-    "id": "web01",
-    "name": "Financial Website",
-    "thumbnail": "/img/web01.png"
-  },
-  {
-    "id": "web02",
-    "name": "Auto Service Website",
-    "thumbnail": "/img/web02.png"
-  },
-  {
-    "id": "web03",
-    "name": "Auto Service Website",
-    "thumbnail": "/img/web03.png"
-  },
-  {
-    "id": "web04",
-    "name": "Music Website",
-    "thumbnail": "/img/web04.png"
->>>>>>> 9d09f99f88f897e224a58dc4de1947342d147e6a
   }
 ]
