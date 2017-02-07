@@ -141,7 +141,7 @@ export default function Home({DOM, HTTP}){
                   div('.year', '2015'),
                   div('.place', [
                     '金扳手科技', br(), '（均瑶集团）',
-                    div('.thing', '第二天主线任务完成')
+                    div('.thing', '第二个主线任务完成')
                   ])
                 ]),
               ]),
@@ -168,7 +168,7 @@ export default function Home({DOM, HTTP}){
           ]),
           div('.screen.screen4', [
             div('.inner', [
-              div('.title', 'SLECTED WORK'),
+              div('.title', 'SELECTED WORK'),
               div('.filter', [
                 a('ALL'),
                 a('WEB'),
