@@ -16,6 +16,7 @@ $note = #FE9A76
 $warning = #FFD700
 $danger = #eb6100
 
+$font-root = 16px
 $font-xxs = 1rem
 $font-xs = 1.2rem
 $font-sm = 1.4rem
@@ -47,6 +48,9 @@ $slower = 1s
 $line-height = 1.4
 
 //mixins
+$rem(factor=1)
+  (10 / $font-root * factor)rem
+
 $stroke(color=$primary, width=1px)
   text-shadow color width 0 0,color 0 width 0,color (-(width)) 0 0,color 0 (-(width)) 0
 

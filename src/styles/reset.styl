@@ -3,7 +3,7 @@
 
 :root
   font-family Helvetica,'Microsoft Yahei',Arial,sans-serif
-  font-size 62.5%
+  font-size $font-root
   color $plain
   line-height 1.4
   margin auto
@@ -12,12 +12,11 @@
   -webkit-tap-highlight-color transparent
 body
   margin 0
-  font-size $font-md
 //larger than iphone5s
 @media (max-width:320px)
 //iphone5s
   :root
-    font-size 52%
+    font-size $rem(.8)
 input
 button
 select
