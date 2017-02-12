@@ -1,10 +1,9 @@
 import xs from 'xstream'
 import {div, input, br, a, img} from '@cycle/dom'
 import './Home.styl'
-import LayoutDefault from '../../components/LayoutDefault'
 import throttle from 'xstream/extra/throttle'
 
-export default function Home({DOM, HTTP}){
+export default function Home({DOM, HTTP, isShowContact}){
   function bricks(box, cols, space){
     space = space || 0
     box.childNodes.forEach((c, i) => {
@@ -69,7 +68,14 @@ export default function Home({DOM, HTTP}){
         }, 1),
       playSprite: xs.periodic(125).map((i) => i % 15),
       works: HTTP.select('works').flatten()
-        .map((res) => res.body)
+        .map((res) => res.body),
+      isShowContact: domSource.select('.contact>.handle')
+        .events('click')
+        .subscribe({
+          next(){
+            isShowContact.shamefullySendNext(true)
+          }
+        })
     }
   }
   function model(actions){
@@ -184,18 +190,21 @@ export default function Home({DOM, HTTP}){
                     a('.link', {attrs: {href: `?workid=${w.id}#/works`}}, '查 看 详 细')
                   ])
                 ])
-              ))
+              )),
+              div('.contact', [
+                a('.handle', '与 我 联 系')
+              ])
             ])
           ]),
         ])
       ])
     )
   }
-  return LayoutDefault({
+  return {
     DOM: view(model(intent(DOM))),
     HTTP: xs.of({
       url: '/json/works.json',
       category: 'works'
-    }),
-  })
+    })
+  }
 }

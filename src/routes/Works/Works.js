@@ -1,9 +1,8 @@
 import xs from 'xstream'
 import {div, a, img} from '@cycle/dom'
 import './Works.styl'
-import LayoutDefault from '../../components/LayoutDefault'
 
-export default function Works({DOM, HTTP}){
+export default function Works({DOM, HTTP, isShowContact}){
   function querys(){
     const result = {}
     if(location.search.length > 1){
@@ -17,14 +16,20 @@ export default function Works({DOM, HTTP}){
   function intent(domSource){
     return {
       work: HTTP.select('works').flatten()
-        .map((res) => res.body.filter((w) => w.id === querys().workid)[0])
+        .map((res) => res.body.filter((w) => w.id === querys().workid)[0]),
+      isShowContact: domSource.select('.contact>.handle')
+        .events('click')
+        .subscribe({
+          next(){
+            isShowContact.shamefullySendNext(true)
+          }
+        })
     }
   }
   function model(actions){
     return xs.combine(
       actions.work,
     ).map(([work]) => {
-      console.log(work)
       return {
         work,
       }
@@ -54,7 +59,7 @@ export default function Works({DOM, HTTP}){
               img({attrs: {src: work.img3}})
             ]),
             div('.contact', [
-              a('与我联系')
+              a('.handle', '与 我 联 系')
             ]),
             div('.foot', [
               div('.projects', [
@@ -68,11 +73,11 @@ export default function Works({DOM, HTTP}){
       ])
     )
   }
-  return LayoutDefault({
+  return {
     DOM: view(model(intent(DOM))),
     HTTP: xs.of({
       url: '/json/works.json',
       category: 'works'
     }),
-  })
+  }
 }

@@ -1,0 +1,37 @@
+@require '../../styles/reset.styl'
+
+.contactBox
+  $cram(fixed)
+  background: rgba(0,0,0,.3)
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .inner
+    width: 520px
+    background: white
+    border-radius: 5px
+    position: relative;
+    padding: 55px 0 74px 40px
+    .close
+      position: absolute;
+      top 20px
+      right: 20px
+      width: 16px
+      height: 16px
+    .tit
+      font-size: 18px
+      color: #942F86
+      margin-bottom: 46px
+    .type
+      margin: 30px 0
+      img
+        margin-right: 20px
+    .qr
+      position: absolute;
+      top: 75px;
+      right: 26px
+      text-align: center;
+      font-size: 12px
+      img
+        display: block;
+        margin-bottom: 10px
