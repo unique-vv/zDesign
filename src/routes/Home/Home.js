@@ -193,6 +193,9 @@ export default function Home({DOM, HTTP, isShowContact}){
               )),
               div('.contact', [
                 a('.handle', '与 我 联 系')
+              ]),
+              div('.ba', [
+                a({attrs: {href: 'http://www.miitbeian.gov.cn/'}}, '赣ICP备17000564号-1')
               ])
             ])
           ]),
